@@ -1,0 +1,1633 @@
+<!DOCTYPE html>
+<html lang="en-in">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @media screen and (orientation: landscape) {
+            main {
+                height: auto;
+            }
+
+            .background-1 {
+                height: 57rem;
+                background-image: url(./image/bg-img1.jpg);
+
+                background-size: cover;
+                background-repeat: no-repeat;
+
+            }
+
+            .back-1-fade {
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.777);
+            }
+
+            .head-section {
+                color: white;
+                height: 10%;
+
+
+            }
+
+            .head-content {
+                height: 100%;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                gap: 50%;
+            }
+
+            .big-t {
+                font-size: 50px;
+                font-weight: bold;
+                color: #a8893c;
+                font-family: Forte;
+            }
+
+            .small-t {
+                font-size: 25px;
+                font-family: Brush Script MT;
+            }
+
+            .bi-list {
+                font-size: 40px;
+                color: #a8893c;
+            }
+
+            /* offcanvas section */
+            .off-can {
+               background-color: #a8893cd6;
+                --bs-offcanvas-width: 300px
+            }
+
+            .list-items {
+                padding:20px;
+               
+                height: 35%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+            }
+
+            .list-items li {
+               
+                height: 20%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .list-items li:hover{
+                background-color: #b17f3a;
+                color: white;
+                font-weight: bold;
+                
+            }
+            .list-items a{
+                text-decoration: none;
+                color: rgba(0, 0, 0, 0.611);
+            }
+            .canva-btn{
+                position: absolute;
+                top: 10px;
+                right: 10px;
+            }
+
+            .about-container {
+
+                height: 100%;
+                margin-top: 8%;
+                display: flex;
+
+                margin: 60px 10% 0%;
+            }
+
+            .ac {
+                height: 100%;
+                width: 100%;
+            }
+
+
+
+            .about-1 {
+                margin-top: 20%;
+                width: 80%;
+                color: #a8893c;
+            }
+
+            .johne {
+                font-size: 60px;
+                font-family: Algerian;
+                color: white;
+            }
+
+            .smith {
+                font-size: 60px;
+                font-family: Algerian;
+                padding-left: 100px;
+                color: white;
+                margin-top: -15px;
+            }
+
+            .about-2nd {
+                margin-top: 8%;
+                height: 100vh;
+                width: 99vw;
+
+            }
+
+            .about-2nd-container {
+                position: relative;
+                display: flex;
+                height: 100%;
+                width: 100%;
+
+
+            }
+
+
+            .bg-img-container {
+
+                height: 100%;
+                width: 100%;
+                background-image: url(./image/bg-img2.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                position: absolute;
+                top: 0%;
+                right: 0%;
+
+            }
+
+            .flot-img-container {
+                position: absolute;
+                top: 10%;
+                left: 10%;
+                height: 73%;
+                width: 28%;
+                padding: 10px;
+                background-color: rgb(232, 241, 249);
+                z-index: 1;
+            }
+
+            .bg-img-container-fade {
+                background-color: rgba(0, 0, 0, 0.77);
+                height: 100%;
+                width: 100%;
+            }
+
+            .about-inside-img {
+
+                height: 55%;
+
+            }
+
+            .flot-img-container .name {
+
+
+                font-size: 45px;
+                font-weight: bold;
+                font-family: math;
+
+
+            }
+
+            .flot-img-container .name::first-letter {
+                font-size: 70px;
+                color: #d98c1f;
+                font-family: -webkit-body;
+
+            }
+
+            .flot-img-container .description {
+
+                width: 88%;
+                color: grey;
+            }
+
+            .about-bg-content {
+                color: #d98c1f;
+                width: 50%;
+                padding-top: 10%;
+                margin-left: 30%;
+            }
+
+            .about-text {
+                font-family: serif;
+                color: white;
+                font-size: 50px;
+                font-weight: bold;
+
+
+
+            }
+
+            .about-bg-content p::first-letter {
+                font-size: 50px;
+                font-family: serif;
+                color: white;
+            }
+
+            .about-author {
+                font-size: 25px;
+                font-weight: bold;
+                margin: 10px 0px;
+            }
+
+            .about-chev {
+                font-size: 30px;
+                margin-top: 30px;
+                display: flex;
+                justify-content: center;
+                gap: 10%;
+            }
+
+            .new-book-container {
+                height: 100vh;
+                width: 99vw;
+                margin-top: 10%;
+
+            }
+
+            .cards-row {
+                height: 50%;
+
+                display: flex;
+                justify-content: space-around;
+                margin: 5% 8%;
+
+            }
+
+            .row-heading {
+                font-size: 60px;
+                font-weight: bold;
+                font-family: serif;
+            }
+
+            .card {
+
+                height: 100%;
+                width: 20%;
+                background-color: rgb(255, 252, 243);
+            }
+
+            .card-image {
+                height: 60%;
+                width: 100%;
+
+
+                background-size: cover;
+                background-repeat: no-repeat;
+
+            }
+
+            .bg-image1 {
+                background-image: url(./image/img1.jpg);
+            }
+
+            .bg-image2 {
+                background-image: url(./image/img2.jpg);
+            }
+
+            .bg-image3 {
+                background-image: url(./image/img3.jpg);
+            }
+
+            .bg-image4 {
+                background-image: url(./image/img4.jpg);
+            }
+
+            .bi-arrow-down {
+                color: white;
+                visibility: hidden;
+            }
+
+            .card-price {
+                color: #d98c1f;
+            }
+
+            .card-img-fade:hover {
+                background-color: rgba(0, 0, 0, 0.76);
+                transition: 0.3s;
+            }
+
+            .card-img-fade:hover .bi-arrow-down {
+                visibility: visible;
+            }
+
+            .list-items {
+                list-style: none;
+            }
+
+            .head-content .bi-list {
+                background: none;
+                border: none;
+            }
+
+            .counter-sec {
+                height: 250px;
+                width: 100%;
+
+                margin-top: 100px;
+                margin-bottom: 100px;
+                background-color: #d98c1f;
+                color: white;
+
+            }
+
+            .blog-container {
+                height: 700px;
+
+                padding-top: 2%;
+                font-family: serif;
+
+            }
+
+            .article-section {
+                flex-wrap: nowrap;
+                display: flex;
+                justify-content: center;
+                height: 85%;
+                width: 90%;
+
+
+            }
+
+            .article-card {
+                text-align: justify;
+                padding: 25px;
+            }
+
+            .article-sec-1 {
+                height: 50%;
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                box-shadow: 1px 1px 5px grey;
+            }
+
+            .article {
+                height: 100%;
+                width: 100%;
+
+                background-size: cover;
+                background-repeat: no-repeat;
+
+            }
+
+            .article-img-1 {
+                background-image: url(./image/img3.jpg);
+            }
+
+            .article-img-2 {
+                background-image: url(./image/img4.jpg);
+            }
+
+            .article-chev {
+                display: flex;
+                margin-top: -10%;
+                font-size: 30px;
+                justify-content: center;
+                gap: 5%;
+            }
+
+            /* people opinion section */
+            .people-opinion-container {
+                height: 700px;
+                width: 100%;
+                background-image: url(./image/bg-img3.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+
+            .p-o-fade {
+                height: 100%;
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.868);
+            }
+
+            .p-o-content-box {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+            }
+
+            .p-o-content {
+                height: 80%;
+                width: 40%;
+                padding: 20px;
+
+            }
+
+            .p-o-heading h1 {
+                font-size: 50px;
+                font-family: sarif;
+                font-weight: bolder;
+            }
+
+            .p-o-paragraph p {
+                width: 90%;
+                padding-top: 20px;
+            }
+
+            .quote .bi-quote {
+                font-size: 60px;
+            }
+
+            .quote .david {
+                font-size: 40px;
+                font-weight: bold;
+                margin-top: -25px;
+            }
+
+            .quote {
+                font-size: 20px;
+            }
+
+            .reader {
+                font-size: 20px;
+                margin-bottom: 30px;
+            }
+
+            .p-o-chev {
+                font-size: 30px;
+                display: flex;
+                justify-content: center;
+                gap: 10%;
+            }
+
+            .social-container {
+                height: 150px;
+                background-image: url(./image/bg-img4.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+
+            }
+
+            .social-fade {
+                background-color: #d98c1fb6;
+            }
+
+            .social-container-content {
+                color: white;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-size: 30px;
+                font-weight: bold;
+                height: 100%;
+                font-family: Areil;
+                margin: 0px 15%;
+            }
+
+            .social-2 {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                width: 25%;
+                font-size: initial;
+                font-size: 20px;
+            }
+
+            .social-2 span {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid white;
+                height: 50px;
+                width: 50px;
+                border-radius: 50%;
+                transition: 0.5s;
+
+            }
+
+            .social-2 span:hover {
+                background-color: rgba(128, 128, 128, 0.829);
+                transition: 0.2s;
+                border: none;
+            }
+
+            .footer-section {
+                height: 500px;
+                background-color: rgb(44, 44, 44);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+            }
+
+            .footer-section-box {
+                height: 80%;
+                width: 80%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .foot-content-1 {
+                display: flex;
+                justify-content: center;
+                flex-direction: row;
+
+            }
+
+            .contact-container {
+                height: 100%;
+                width: 100%;
+
+            }
+
+            .image-container {
+                height: 60%;
+                width: 100%;
+
+            }
+
+            .img-box {
+
+                height: 80%;
+                background-image: url(./image/img4.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+            .social-2-part2 {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                width: 70%;
+                font-size: initial;
+                font-size: 20px;
+            }
+
+            .social-2-part2 span {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid grey;
+                height: 40px;
+                width: 40px;
+                border-radius: 50%;
+                transition: 0.5s;
+            }
+
+            .social-2-part2 span:hover {
+                background-color: rgba(128, 128, 128, 0.829);
+                transition: 0.2s;
+                border: none;
+            }
+
+            .input-container {
+                height: 250px;
+                display: grid;
+                grid-template-rows: 4fr 8fr;
+                gap: 20px;
+
+                padding: 20px;
+            }
+
+            .g-row-1 {
+
+                display: grid;
+                grid-template-columns: 6fr 6fr;
+                gap: 20px;
+            }
+
+            .copy-foot {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                height: 60px;
+                background-color: rgba(0, 0, 0, 0.778);
+                color: rgba(205, 205, 205, 0.6);
+
+            }
+
+
+
+            .foot-con-2 {
+                font-size: 20px;
+                font-weight: bolder;
+                color: rgba(128, 128, 128, 0.353);
+            }
+
+            .form-btn {
+                margin-top: 40px;
+            }
+
+            .foot-con-2 span {
+                padding-right: 15px;
+            }
+
+        }
+
+        @media screen and (orientation: portrait) {
+            main {
+                height: auto;
+            }
+
+            .background-1 {
+                height: 57rem;
+                background-image: url(./image/bg-img1.jpg);
+
+                background-size: cover;
+                background-repeat: no-repeat;
+
+            }
+
+            .back-1-fade {
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.777);
+            }
+
+            .head-section {
+                color: white;
+                height: 10%;
+
+
+            }
+
+            .head-content {
+                height: 100%;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                gap: 50%;
+            }
+
+            .big-t {
+                font-size: 50px;
+                font-weight: bold;
+                color: #a8893c;
+                font-family: Forte;
+            }
+
+            .small-t {
+                font-size: 25px;
+                font-family: Brush Script MT;
+            }
+
+            .bi-list {
+                font-size: 40px;
+                color: #a8893c;
+            }
+             
+             /* offcanvas section */
+            .off-can {
+                background-color: #a8893cd6;
+                --bs-offcanvas-width: 300px
+            }
+
+            .list-items {
+                padding: 20px;
+               
+                height: 35%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+            }
+
+            .list-items li {
+               
+                height: 20%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .list-items li:hover{
+                background-color: #b17f3a;
+                color: white;
+                font-weight: bold;
+            }
+             .list-items a{
+                text-decoration: none;
+                color: rgba(0, 0, 0, 0.611);
+            }
+             .canva-btn{
+                position: absolute;
+                top: 10px;
+                right: 10px;
+            }
+
+            .about-container {
+
+                height: 100%;
+
+                display: flex;
+                flex-direction: column;
+                margin: 10px 10% 0%;
+            }
+
+            .ac {
+                height: 100%;
+                width: 100%;
+            }
+
+
+
+            .about-1 {
+                margin-top: 20%;
+                width: 100%;
+                color: #a8893c;
+
+            }
+
+            .johne {
+                font-size: 40px;
+                font-family: Algerian;
+                color: white;
+                display: inline;
+                margin-left: -20px;
+            }
+
+            .smith {
+                font-size: 40px;
+                font-family: Algerian;
+                padding-left: 10px;
+                color: white;
+                margin-top: -20px;
+                display: inline;
+            }
+
+            .details {
+                margin-right: -30px;
+            }
+
+            .about-2nd {
+
+                height: 950px;
+                width: 100%;
+
+            }
+
+            .about-2nd-container {
+                position: relative;
+                display: flex;
+                height: 100%;
+                width: 100%;
+            }
+
+
+            .bg-img-container {
+
+                height: 100%;
+                width: 100%;
+                background-image: url(./image/bg-img2.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                position: absolute;
+                top: 0%;
+                right: 0%;
+
+            }
+
+            .flot-img-container {
+                position: absolute;
+                top: 0%;
+                left: 10%;
+                height: 40%;
+                width: 80%;
+                padding: 10px;
+                background-color: rgb(232, 241, 249);
+                z-index: 1;
+            }
+
+            .bg-img-container-fade {
+                background-color: rgba(0, 0, 0, 0.77);
+                height: 81%;
+                width: 100%;
+
+            }
+
+            .about-inside-img {
+                height: 50%;
+            }
+
+            .flot-img-container .name {
+
+
+                font-size: 45px;
+                font-weight: bold;
+                font-family: math;
+
+
+            }
+
+            .flot-img-container .name::first-letter {
+                font-size: 70px;
+                color: #d98c1f;
+                font-family: -webkit-body;
+
+            }
+
+            .flot-img-container .description {
+
+                width: 91%;
+                color: grey;
+            }
+
+            .about-bg-content {
+                margin-top: 50%;
+                color: #d98c1f;
+                width: 100%;
+                padding-top: 60%;
+            }
+
+            .about-bg-content hr {
+                margin-top: -2px;
+
+            }
+
+            .about-text {
+                font-family: serif;
+                color: white;
+                font-size: 35px;
+                font-weight: bold;
+            }
+
+            .about-bg-content p {
+                text-align: justify;
+                padding: 20px;
+                margin-top: -15px;
+            }
+
+            .about-bg-content p::first-line {
+                line-height: 5px;
+            }
+
+            .about-bg-content p::first-letter {
+                font-size: 40px;
+                font-family: serif;
+                color: white;
+            }
+
+            .about-author {
+                font-size: 25px;
+                font-weight: bold;
+                margin-top: -25px;
+                margin-bottom: 10px;
+            }
+
+            .about-chev {
+                font-size: 30px;
+                margin-top: 10px;
+                display: flex;
+                justify-content: center;
+                gap: 20%;
+            }
+
+            .new-book-container {
+                height: 1500px;
+                width: 100%;
+                margin-top: 10%;
+
+            }
+
+            .cards-row {
+                height: 100%;
+
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+
+            }
+
+            .row-heading {
+                font-size: 35px;
+                font-weight: bold;
+                font-family: serif;
+            }
+
+            .card {
+
+                height: 24%;
+                width: 80%;
+                background-color: rgb(255, 252, 243);
+            }
+
+            .card-image {
+                height: 60%;
+                width: 100%;
+
+
+                background-size: cover;
+                background-repeat: no-repeat;
+
+            }
+
+            .bg-image1 {
+                background-image: url(./image/img1.jpg);
+            }
+
+            .bg-image2 {
+                background-image: url(./image/img2.jpg);
+            }
+
+            .bg-image3 {
+                background-image: url(./image/img3.jpg);
+            }
+
+            .bg-image4 {
+                background-image: url(./image/img4.jpg);
+            }
+
+            .bi-arrow-down {
+                color: white;
+                visibility: hidden;
+            }
+
+            .card-price {
+                color: #d98c1f;
+            }
+
+            .card-img-fade:hover {
+                background-color: rgba(0, 0, 0, 0.76);
+                transition: 0.3s;
+            }
+
+            .card-img-fade:hover .bi-arrow-down {
+                visibility: visible;
+            }
+
+            .list-items {
+                list-style: none;
+            }
+
+            .head-content .bi-list {
+                background: none;
+                border: none;
+            }
+
+            .counter-sec {
+                height: 150px;
+                width: 100%;
+
+                margin-top: 200px;
+                margin-bottom: 100px;
+                background-color: #d98c1f;
+                color: white;
+
+            }
+
+            .counters {
+                gap: 25px;
+            }
+
+            .blog-container {
+                height: 700px;
+
+                padding-top: 2%;
+                font-family: serif;
+
+            }
+
+            .article-section {
+                height: 100%;
+                flex-wrap: wrap;
+                flex-direction: column;
+
+
+            }
+
+            .article-card {
+                text-align: justify;
+                padding: 25px;
+            }
+
+            .article-sec-1 {
+                height: 73%;
+                width: 88%;
+                display: flex;
+                flex-direction: column;
+                box-shadow: 1px 1px 5px grey;
+            }
+
+            .article {
+                height: 100%;
+                width: 100%;
+
+                background-size: cover;
+                background-repeat: no-repeat;
+
+            }
+
+            .article-img-1 {
+                background-image: url(./image/img3.jpg);
+            }
+
+            .article-img-2 {
+                background-image: url(./image/img4.jpg);
+            }
+
+            .article-chev {
+                display: none;
+
+            }
+
+            .people-opinion-container {
+                height: 700px;
+                width: 100%;
+                background-image: url(./image/bg-img3.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                margin-top: 30rem;
+            }
+
+            .p-o-fade {
+                height: 100%;
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.868);
+            }
+
+            .p-o-content-box {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+            }
+
+            .p-o-content {
+                height: 80%;
+                width: 100%;
+                padding: 14px;
+
+            }
+
+            .p-o-heading h1 {
+                font-size: 35px;
+                font-family: sarif;
+                font-weight: bolder;
+            }
+
+            .p-o-paragraph p {
+                width: 90%;
+                padding-top: 20px;
+            }
+
+            .quote .bi-quote {
+                font-size: 60px;
+            }
+
+            .quote .david {
+                font-size: 40px;
+                font-weight: bold;
+                margin-top: -25px;
+            }
+
+            .quote {
+                font-size: 20px;
+            }
+
+            .reader {
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+
+            .p-o-chev {
+                font-size: 30px;
+                display: flex;
+                justify-content: center;
+                gap: 10%;
+            }
+
+            .social-container {
+                height: 200px;
+                background-image: url(./image/bg-img4.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+
+            }
+
+            .social-fade {
+                background-color: #d98c1fb6;
+            }
+
+            .social-container-content {
+                color: white;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                font-size: 30px;
+                font-weight: bold;
+                height: 100%;
+                font-family: Areil;
+                margin: 0px 15%;
+            }
+
+            .social-2 {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                width: 100%;
+                font-size: initial;
+                font-size: 20px;
+            }
+
+            .social-2 span {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid white;
+                height: 50px;
+                width: 50px;
+                border-radius: 50%;
+                transition: 0.5s;
+
+            }
+
+            .social-2 span:hover {
+                background-color: rgba(128, 128, 128, 0.829);
+                transition: 0.2s;
+                border: none;
+            }
+
+            /* footer section */
+            .footer-section {
+                height: 950px;
+                background-color: rgb(44, 44, 44);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+            }
+
+            .footer-section-box {
+                height: 100%;
+                width: 95%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .foot-content-1 {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+
+
+            }
+
+            .contact-container {
+                height: 100%;
+                width: 100%;
+
+            }
+
+            .image-container {
+                height: 85%;
+                width: 70%;
+                margin-left: 15%;
+                margin-top: 5%;
+
+            }
+
+            .img-box {
+
+                height: 80%;
+                background-image: url(./image/img4.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+            .social-2-part2 {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                width: 70%;
+                font-size: initial;
+                font-size: 20px;
+            }
+
+            .social-2-part2 span {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid grey;
+                height: 40px;
+                width: 40px;
+                border-radius: 50%;
+                transition: 0.5s;
+            }
+
+            .social-2-part2 span:hover {
+                background-color: rgba(128, 128, 128, 0.829);
+                transition: 0.2s;
+                border: none;
+            }
+
+            .input-container {
+                height: 250px;
+                display: grid;
+                grid-template-rows: 6fr 6fr;
+                gap: 20px;
+
+                padding: 20px;
+            }
+
+            .g-row-1 {
+
+                display: grid;
+                grid-template-rows: 6fr 6fr;
+                gap: 20px;
+            }
+
+            .copy-foot {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                height: 60px;
+                background-color: rgba(0, 0, 0, 0.778);
+                color: rgba(255, 255, 255, 0.6);
+
+            }
+
+            .foot-con-1 {
+                font-size: 16px;
+                color: #7a7a7a9e;
+            }
+
+            .foot-con-2 {
+                font-size: 20px;
+                font-weight: bolder;
+                color: rgba(128, 128, 128, 0.353);
+                display: none;
+            }
+
+            .form-btn {
+                margin-top: 20px;
+            }
+
+            .foot-con-2 span {
+                padding-right: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <div class="background-1">
+            <div class="back-1-fade">
+
+                <header class="head-section">
+                    <div class="head-content">
+                        <div>
+                            <span class="big-t">JS</span>
+                            <span class="small-t">Books</span>
+                        </div>
+                        <div><button class="bi bi-list" data-bs-toggle="offcanvas" data-bs-target="#navs"
+                                class="btn"></button></div>
+                    </div>
+                </header>
+                <div class=" off-can offcanvas offcanvas-end " id="navs" tabindex="-1">
+                    <div class="offcanvas-body p-2 position-relative">
+                        <ul class="list-items ">
+                            <li ><a href="#">HOME</a></li>
+                            <li ><a href="#">ABOUT ME</a></li>
+                            <li ><a href="#">MY BOOKS</a></li>
+                            <li ><a href="#">CONTACT ME</a></li>
+                            <li ><a href="#">PEOPLES THOUGHT</a></li>
+                        </ul>
+
+                        <button class=" canva-btn btn btn-close btn-danger " data-bs-dismiss="offcanvas"></button>
+                    </div>
+
+                </div>
+                <main>
+                    <section class="h-100">
+                        <div class="about-container ">
+                            <div class="about-img ac">
+                                <img class="" src="./image/p-1.jpg" height="auto" width=" 100%" alt="image">
+                            </div>
+                            <div class="h-100 w-100 ac">
+                                <div class="about-1 ">
+                                    <div class=" text-start ">Hello! I'm</div>
+                                    <div class=" johne  text-start ">Johne</div>
+                                    <div class=" smith  text-start ">Smith</div>
+                                    <div class=" details text-center ps-4 mb-4">(Author, Writer, Traveler) </div>
+                                    <div class=" text-start mb-4 text-secondary ">One Man. One Mission. Can He Go
+                                        Beyond?One Man. One Mission. Can He Go Beyond?</div>
+                                    <div class=" text-start mb-4"><button
+                                            class="btn btn-outline-light text-warning">READ BIO ></button></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="about-2nd ">
+                            <div class="about-2nd-container">
+
+                                <div class="flot-img-container">
+                                    <div class="about-inside-img">
+                                        <img class="h-100 w-100" src="./image/p-2.jpeg">
+                                    </div>
+                                    <div class="name">Jhone Smith</div>
+                                    <div class="description"><i>Johne Smith is a short story author, novelist, and
+                                            award-winning poet.</i></div>
+                                </div>
+
+                                <div class="bg-img-container">
+                                    <div class="bg-img-container-fade ">
+                                        <div class="about-bg-content">
+                                            <div class="about-text">About Me</div>
+                                            <hr noshade style="width: 8%;color: #ffb700; opacity: 1;">
+
+                                            <p>He has work appearing or forthcoming in over a dozen venues, including
+                                                Buzzy Mag, The Spirit of Poe, and the British Fantasy Society journal
+                                                Dark Horizons. He is also CEO of a company, specializing in custom book
+                                                publishing and social media marketing services, have created a community
+                                                for authors to learn and connect. He has work appearing or forthcoming
+                                                in over a dozen venues, including Buzzy Mag, The Spirit of Poe, and have
+                                                created a community for authors to learn and connect.</p>
+                                            <div class="about-author ">Author</div>
+                                            <div class="text-light">See me</div>
+                                            <div class="about-chev">
+                                                <span class="bi bi-chevron-left"></span>
+                                                <span class="bi bi-chevron-right"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--new-book section-->
+                        <div class="new-book-container">
+                            <div class="row-heading">New Books And CD</div>
+                            <hr noshade style="width: 8%;color: #ffb700; opacity: 1;">
+                            <hr noshade style="width: 5%;color: #ffb700; opacity: 1;">
+                            <div class="cards-row">
+                                <div class="card">
+                                    <div class="card-image bg-image1">
+                                        <div class="card-img-fade h-100 w-100">
+                                            <span
+                                                class="bi bi-arrow-down h-100 w-100 fs-2 d-flex justify-content-center  align-items-center"></span>
+                                        </div>
+                                    </div>
+                                    <div class="card-title mb-3 fw-bold fs-5 ">Olivani</div>
+                                    <div class="card-price mb-3 fw-bold fs-5"><i>$15.00</i></div>
+                                    <div class="card-rate">
+                                        <span class="bi bi-star-fill text-warning"></span>
+                                        <span class="bi bi-star-fill text-warning"></span>
+                                        <span class="bi bi-star-fill text-warning"></span>
+                                        <span class="bi bi-star-fill text-warning"></span>
+                                        <span class="bi bi-star text-warning"></span>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-image bg-image2">
+                                        <div class="card-img-fade h-100 w-100">
+                                            <span
+                                                class="bi bi-arrow-down h-100 w-100 fs-2 d-flex justify-content-center  align-items-center"></span>
+                                        </div>
+                                    </div>
+                                    <div class="card-title mb-3 fw-bold fs-5 ">Molleon's Life</div>
+                                    <div class="card-price mb-3 fw-bold fs-5"><i>$22.00</i></div>
+                                    <div class="card-rate">
+                                        <span class="bi bi-star-fill text-warning"></span>
+                                        <span class="bi bi-star-fill text-warning"></span>
+                                        <span class="bi bi-star-fill text-warning"></span>
+                                        <span class="bi bi-star-fill text-warning"></span>
+                                        <span class="bi bi-star text-warning"></span>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-image bg-image3">
+                                        <div class="card-img-fade h-100 w-100">
+                                            <span
+                                                class="bi bi-arrow-down h-100 w-100 fs-2 d-flex justify-content-center  align-items-center"></span>
+                                        </div>
+                                    </div>
+                                    <div class="card-title mb-3 fw-bold fs-5 ">Love is Love</div>
+                                    <div class="card-price mb-3 fw-bold fs-5"><i>$25.00</i></div>
+                                    <div class="card-rate">
+                                        <span class="bi bi-star-fill text-warning"></span>
+                                        <span class="bi bi-star-fill text-warning"></span>
+                                        <span class="bi bi-star-fill text-warning"></span>
+                                        <span class="bi bi-star-fill text-warning"></span>
+                                        <span class="bi bi-star-fill text-warning"></span>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-image bg-image4">
+                                        <div class="card-img-fade h-100 w-100">
+                                            <span
+                                                class="bi bi-arrow-down h-100 w-100 fs-2 d-flex justify-content-center  align-items-center"></span>
+                                        </div>
+                                    </div>
+                                    <div class="card-title mb-3 fw-bold fs-5 ">Give me Also</div>
+                                    <div class="card-price mb-3 fw-bold fs-5"><i>$30.00</i></div>
+                                    <div class="card-rate">
+                                        <span class="bi bi-star-fill text-warning"></span>
+                                        <span class="bi bi-star-fill text-warning"></span>
+                                        <span class="bi bi-star-fill text-warning"></span>
+                                        <span class="bi bi-star-fill text-warning"></span>
+                                        <span class="bi bi-star text-warning"></span>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <button class="btn btn-outline-warning mt-4">View More</button>
+
+                        </div>
+                        <!-- Book counter starts -->
+
+                        <div class="counter-sec fw-bold fs-6">
+                            <div class=" counters w-75 h-100 d-flex justify-content-around align-items-center">
+                                <div>
+                                    <h1>50</h1>
+                                    <span class="bi bi-journal-bookmark-fill  "> BOOKS</span>
+                                </div>
+                                <div>
+                                    <h1>600</h1>
+                                    <span class="bi bi-book-half "> PAGES</span>
+                                </div>
+                                <div>
+                                    <h1>2000</h1>
+                                    <span class="bi bi-cart-check-fill "> SALES</span>
+                                </div>
+                                <div>
+                                    <h1>125</h1>
+                                    <span class="bi bi-trophy-fill "> AWARDS</span>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!---->
+                        <div class="blog-container ">
+                            <h1 class="fw-bold">My Blog</h1>
+                            <hr noshade style="width: 8%;color: #ffb700; opacity: 1;">
+
+
+                            <div class="article-section  ">
+                                <div class="article-sec-1 m-4">
+                                    <div class="article-img-1 article border">
+
+                                    </div>
+                                    <div class="article-card w-100 ">
+                                        <h2 class=" pb-2  fw-bold">The Journey Under the Waves</h2>
+                                        <div class=" pb-2 text-warning">On August 28,2015</div>
+                                        <p class=" pb- ">Quisque vel sapi nec lacus
+                                            adipis cing bibendum nullam
+                                            porta lites laoreet
+                                            aliquam.velitest, tempus a
+                                            ullamcorper et, lacinia mattis
+                                            mi. Cras arcu nulla, blandit
+                                            id cursus et, ultricies eu leo.</p>
+                                    </div>
+                                </div>
+                                <div class="article-sec-1 m-4 ">
+
+                                    <div class="article-img-2 article border">
+
+                                    </div>
+                                    <div class="article-card w-100 ">
+                                        <h2 class=" pb-2 fw-bold ">The Journey Under the Waves</h2>
+                                        <div class=" pb-2 text-warning">On August 28,2015</div>
+                                        <p class=" pb- ">Quisque vel sapi nec lacus
+                                            adipis cing bibendum nullam
+                                            porta lites laoreet
+                                            aliquam.velitest, tempus a
+                                            ullamcorper et, lacinia mattis
+                                            mi. Cras arcu nulla, blandit
+                                            id cursus et, ultricies eu leo.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="article-chev">
+                                <span class="bi bi-chevron-left"></span>
+                                <span class="bi bi-chevron-right"></span>
+                            </div>
+                        </div>
+                        <!--People says About me section-->
+                        <div class="people-opinion-container ">
+                            <div class="p-o-fade">
+                                <div class="p-o-content-box h-100 w-100">
+                                    <div class="p-o-content  text-light">
+                                        <div class="p-o-heading">
+                                            <h1>What People are Saying</h1>
+                                        </div>
+                                        <hr noshade style="width: 8%;color: #ffb700; opacity: 1;">
+                                        <hr noshade style="width: 5%;color: #ffb700; opacity: 1;">
+                                        <div class="p-o-paragraph">
+                                            <p>"Pudding croissant cake candy canes fruitcake sweet roll pastry
+                                                gummies sugar plum. Tart pastry danish soufflé donut bear claw
+                                                chocolate cake marshmallow chupa chups. Jelly danish gummi bears
+                                                cake donut powder chocolate cake. Bonbon soufflé lollipop biscuit
+                                                dragée jelly-o. Wafer pastry pudding tiramisu chocolate bar croissant
+                                                cake. Pie caramels gummies danish."</p>
+                                        </div>
+                                        <div class="quote">
+                                            <span class="bo bi-quote d-block"></span>
+                                            <span class=" david d-block">David Dixon</span>
+                                            <span class=" reader d-block">Reader</span>
+                                        </div>
+                                        <div class="p-o-chev ">
+                                            <span class="bi bi-chevron-left "></span>
+                                            <span class="bi bi-chevron-right "></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="social-container">
+                            <div class="social-fade h-100 w-100">
+                                <div class="social-container-content">
+                                    <div class="social-1">Follow me!!</div>
+                                    <div class="social-2">
+                                        <span class="bi bi-twitter"></span>
+                                        <span class="bi bi-instagram"></span>
+                                        <span class="bi bi-youtube"></span>
+                                        <span class="bi bi-facebook"></span>
+                                    </div>
+                                    <div class="social-3">Share it</div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+                </main>
+                <footer>
+                    <div class="footer-section">
+                        <div class="footer-section-box">
+                            <div class="foot-content-1 h-100 w-100">
+                                <div class="image-container">
+                                    <div class="img-box">
+
+                                    </div>
+                                    <a href="#" style="text-decoration:none;color:#d98c1f"> Read More About Me </a>
+                                </div>
+                                <div class="contact-container p-3 text-light">
+                                    <h2 class="mb-4 text-light">Get In Touch</h2>
+                                    <div class="text-secondary mb-2">Phone: +958734902847</div>
+                                    <div class="text-secondary mb-4">Email : Johne@Example.com</div>
+                                    <div class="social-2-part2">
+                                        <span class="bi bi-twitter"></span>
+                                        <span class="bi bi-instagram"></span>
+                                        <span class="bi bi-youtube"></span>
+                                        <span class="bi bi-facebook"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="foot-content-2  h-100 w-100">
+                                <form>
+                                    <h2 class="text-light">Contact Form</h2>
+                                    <div class="input-container">
+                                        <div class="g-row-1">
+                                            <div class="input-text"><input class="h-100 w-100 bg-dark text-light"
+                                                    type="text" placeholder="Name"></div>
+                                            <div class="input-email"><input class="h-100 w-100 bg-dark text-light"
+                                                    type="email" placeholder="Email"></div>
+                                        </div>
+                                        <div class="g-row-2"><input class="h-100 w-100 bg-dark text-light" type="text">
+                                        </div>
+                                    </div>
+                                    <button class=" form-btn btn btn-warning text-light px-5 py-2 ">SUBMIT</button>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="copy-foot ">
+                        <div class="foot-con-1">
+                            <span>&copy; 2025 Author </span> |
+                            <span>Design by Satyaranjan7777</span> |
+                            <span> All rights Reserved.</span>
+                        </div>
+                        <div class="foot-con-2">
+                            <span><i>MASTER CARD</i></span>
+                            <span><i>PAYPAL</i></span>
+                            <span><i>VISA</i></span>
+                            <span><i>FEDEX</i></span>
+                            <span><i>DHL</i></span>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+
+    </center>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>*
