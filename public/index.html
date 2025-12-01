@@ -7,20 +7,14 @@
     <title>Document</title>
     <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
-    <link
-  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-  rel="stylesheet"
-/>
-
-<link
-  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
-  rel="stylesheet"
-/>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+        html{
+            scroll-behavior:smooth;
         }
 
         @media screen and (orientation: landscape) {
@@ -1292,10 +1286,10 @@
 
 <body>
     <center>
-        <div class="background-1">
+        <div class="background-1" id="home">
             <div class="back-1-fade">
 
-                <header class="head-section">
+                <header class="head-section ">
                     <div class="head-content">
                         <div>
                             <span class="big-t">JS</span>
@@ -1308,11 +1302,12 @@
                 <div class=" off-can offcanvas offcanvas-end " id="navs" tabindex="-1">
                     <div class="offcanvas-body p-2 position-relative">
                         <ul class="list-items ">
-                            <li ><a href="#">HOME</a></li>
-                            <li ><a href="#">ABOUT ME</a></li>
-                            <li ><a href="#">MY BOOKS</a></li>
-                            <li ><a href="#">CONTACT ME</a></li>
-                            <li ><a href="#">PEOPLES THOUGHT</a></li>
+                            <li ><a href="#home">HOME</a></li>
+                            <li ><a href="#about">ABOUT ME</a></li>
+                            <li ><a href="#books">MY BOOKS</a></li>
+                            <li ><a href="#contact">CONTACT ME</a></li>
+                            <li ><a href="#p-thoughts">PEOPLES THOUGHT</a></li>
+                            <li ><a href="#blog">MY BLOGS</a></li>
                         </ul>
 
                         <button class=" canva-btn btn btn-close btn-danger " data-bs-dismiss="offcanvas"></button>
@@ -1338,7 +1333,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="about-2nd ">
+                        <div class="about-2nd " id="about">
                             <div class="about-2nd-container">
 
                                 <div class="flot-img-container">
@@ -1375,7 +1370,7 @@
                             </div>
                         </div>
                         <!--new-book section-->
-                        <div class="new-book-container">
+                        <div class="new-book-container" id="books">
                             <div class="row-heading">New Books And CD</div>
                             <hr noshade style="width: 8%;color: #ffb700; opacity: 1;">
                             <hr noshade style="width: 5%;color: #ffb700; opacity: 1;">
@@ -1478,7 +1473,7 @@
                             </div>
                         </div>
                         <!---->
-                        <div class="blog-container ">
+                        <div class="blog-container " id="blog">
                             <h1 class="fw-bold">My Blog</h1>
                             <hr noshade style="width: 8%;color: #ffb700; opacity: 1;">
 
@@ -1525,7 +1520,7 @@
                             </div>
                         </div>
                         <!--People says About me section-->
-                        <div class="people-opinion-container ">
+                        <div class="people-opinion-container " id="p-thoughts">
                             <div class="p-o-fade">
                                 <div class="p-o-content-box h-100 w-100">
                                     <div class="p-o-content  text-light">
@@ -1555,7 +1550,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="social-container">
+                        <div class="social-container" id="contact">
                             <div class="social-fade h-100 w-100">
                                 <div class="social-container-content">
                                     <div class="social-1">Follow me!!</div>
@@ -1636,8 +1631,7 @@
 
     </center>
     <script src="../node_modules/jquery/dist/jquery.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 </body>
 
-</html>*
+</html>
